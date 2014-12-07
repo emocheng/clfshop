@@ -1,0 +1,6 @@
+[ 2014-11-26T10:26:31+08:00 ] 127.0.0.1 /index.php/user/user_goods
+ERR: 无法加载控制器:User_goods
+
+[ 2014-11-26T15:16:37+08:00 ] 127.0.0.1 /index.php?m=User&c=home&a=index
+ERR: 无法加载控制器:Home
+

@@ -1,0 +1,53 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="welcome_user">
+        <div class="user_info">
+            <div class="user_info_img">
+                <img src="__PUBLIC__/img/admin_03.gif" width="50" height="50">
+            </div>
+            <div class="user_info_name">
+                <p>{{$user.name}}</p>
+                <p>欢迎光临长乐坊</p>
+            </div>
+        </div>
+        <div class="user_pay">
+            <p>余额:<span>{{$sum}}</span></p>
+            <p>积分:<span>100</span></p>
+            <p>等级:<span>{{$u_f.level_name}}</span></p>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="user_view">
+        <p>浏览历史</p>
+        <div class="view_pc">
+            <ul>
+                <li><a href=""><img src="__PUBLIC__/img/user_06.gif"/></a></li>
+                <li>
+                    <a href="">
+                        <img src="__PUBLIC__/img/user_03.gif"/>
+                        <p>￥3599.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="__PUBLIC__/img/user_03.gif"/>
+                        <p>￥3599.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="__PUBLIC__/img/user_03.gif"/>
+                        <p>￥3599.00</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="__PUBLIC__/img/user_03.gif"/>
+                        <p>￥3599.00</p>
+                    </a>
+                </li>
+                <li><a href=""><img src="__PUBLIC__/img/user_09.gif"/></a></li>
+            </ul>
+        </div>
+    </div>
+</block>

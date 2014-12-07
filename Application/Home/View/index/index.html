@@ -1,0 +1,235 @@
+<extend name="./Public/layout_home.html" />
+<block name="container">
+	 	<div class="top_a">
+	 		<div class="fenlei">
+	 			<div class="fenlei_shang">
+	 				<div class="fenlei_font"><a href="">产品分类</a></div>
+	 					<div class="fenleibiao">
+	 						<table>
+	 							<tr><td><a href="#">台式机</a></td>
+									<td><a href="#">笔记本</a></td>
+	 							<tr>
+	 							<tr>
+	 								<td><a href="#">平板电</a></td>
+									<td><a href="#">电脑一体机</a></td>
+	 							<tr>
+	 							<tr>
+	 								<td><a href="#">ipad</a></td>
+									<td><a href="#">电脑配件</a></td>
+	 							<tr>
+	 						</table>
+			 			</div>
+			 	</div>
+			 		<div class="fenlei_xia">	
+	 			<div class="fenlei_font"><a href="">热销品牌</a></div>
+	 				<div class="fenleibiao">
+	 					<table>
+	 							<tr><td><a href="#">联想</a></td>
+									<td><a href="#">thinpad</a></td>
+	 							<tr>
+	 							<tr>
+	 								<td><a href="#">华硕</a></td>
+									<td><a href="#">三星</a></td>
+	 							<tr>
+	 							<tr>
+	 								<td><a href="#">apple</a></td>
+									<td><a href="#">宏碁</a></td>
+	 							<tr>
+	 								<tr>
+	 								<td><a href="#">DELL</a></td>
+									<td><a href="#">HP</a></td>
+	 							<tr>
+	 								<tr>
+	 								<td><a href="#">Micros</a></td>
+									<td><a href="#">清华同方</a></td>
+	 							<tr>
+	 						</table>
+			 		</div>
+			 	</div>	
+	 		</div> <!--fenlei到此结束 -->
+	 		<div class="lungun">
+				<img src="__PUBLIC__/img/datu_03.gif" />
+	 		</div> <!--lungun到此结束 664 304-->
+	 	</div> <!--top_a到此结束 -->
+	 	<div class="top_b">
+	 		<div class="top_b_title">
+	 			<div class="tejia active">今日特价</div>
+	 			<div class="tejia">最近降价</div>
+	 			<div class="tejia">人气明星</div>
+	 		</div> <!--top_b_title到此结束 -->
+	 		<div class="top_b_main">
+	 			<div class="b_main">
+	 				<div class="main_wenzi">
+                        <a href=>仅约426克三防平板
+	 					至轻至薄高享受！10.1英寸大屏</a>
+	 				</div>
+	 				<div class="main_img">
+	 					<img src="__PUBLIC__/img/tu_4.gif">
+	 				</div>
+	 				<div class="sale">
+	 					￥3099.00
+	 				</div>
+	 			</div>
+	 			
+	 			<div class="b_main">
+					<div class="main_wenzi">
+                        <a href="">仅约426克三防平板
+	 					至轻至薄高享受！10.1英寸大屏</a>
+	 				</div>
+	 				<div class="main_img">
+	 					<img src="__PUBLIC__/img/tu_4.gif">
+	 				</div>
+	 				<div class="sale">
+	 					￥3099.00
+	 				</div>	
+	 			</div>
+	 			
+	 			<div class="b_main">
+					<div class="main_wenzi">
+                        <a href="">仅约426克三防平板
+	 					至轻至薄高享受！10.1英寸大屏</a>
+	 				</div>
+	 				<div class="main_img">
+	 					<img src="__PUBLIC__/img/tu_4.gif">
+	 				</div>
+	 				<div class="sale">
+	 					￥3099.00
+	 				</div>
+	 			</div>
+	 			
+	 			<div class="b_main">
+					<div class="main_wenzi">
+                        <a href="">
+                            <a href="">仅约426克三防平板
+	 					至轻至薄高享受！10.1英寸大屏</a>
+	 				</div>
+	 				<div class="main_img">
+	 					<img src="__PUBLIC__/img/tu_4.gif">
+	 				</div>
+	 				<div class="sale">
+	 					￥3099.00
+	 				</div>
+	 			</div>
+	 		</div> <!--top_b_main 206px到此结束 -->
+	 	</div> <!--top_b到此结束 -->
+	 	<div class="top_c">
+	 		<div class="c_left">
+	 			<div class="left_shang">
+	 					<p>笔记本君</p>
+	 					<a href="#">more</a>
+	 			</div>
+	 			<div class="left_zhong">
+	 				<a href="">【华硕】</a>
+	 				<a href="">【联想】</a>
+	 				<a href="">【三星】</a>
+	 				<a href="">【戴尔】</a>
+	 				<a href="">【ThinkPad】</a>
+	 			</div>
+	 			<div class="left_xia">
+	 				<div class="xia_tu">
+	 				<img src="__PUBLIC__/img/tutu_07.gif"></div>
+	 				<div class="jieshao">
+                        <a href="">戴尔Inter14MR-1528S灵越14英寸笔记本电脑</a>
+	 				</div>
+	 				<div class="sale">￥4699.00</div>
+	 			</div>
+	 		</div><!--left到此结束 -->
+	 		<div class="c_right">
+                <volist name="pc_note" id="v">
+                    <div class="pc">
+                        <div class="pc_img">
+                            <img src="{{$v.thumb}}.gif" width="152" height="105">
+                        </div>
+                        <div class="pc_wenzi">
+                            <a href={{:U("home/index/goods","id=$v[id]")}}>{{$v.name}}</a>
+                        </div>
+                        <div class="sale">
+                            ￥{{$v.price}}.00
+                        </div>
+                    </div>
+                </volist>
+	 		</div><!--right到此结束 -->
+	 		<div class="clear"></div>
+	 	</div>	<!--top_c到此结束 -->
+	 	<div class="top_c">
+	 		<div class="c_left">
+	 			<div class="left_shang">
+	 					<p>台式王子</p>
+	 					<a href="#">more</a>
+	 			</div>
+	 			<div class="left_zhong">
+	 				<a href="">【华硕】</a>
+	 				<a href="">【联想】</a>
+	 				<a href="">【三星】</a>
+	 				<a href="">【戴尔】</a>
+	 				<a href="">【ThinkPad】</a>
+	 			</div>
+	 			<div class="left_xia">
+	 				<div class="xia_tu">
+	 				<img src="__PUBLIC__/img/tutu_07.gif"></div>
+	 				<div class="jieshao">
+                        <a href="">戴尔Inter14MR-1528S灵越14英寸笔记本电脑</a>
+	 				</div>
+	 				<div class="sale">￥4699.00</div>
+	 			</div>
+	 		</div><!--left到此结束 -->
+	 		<div class="c_right">
+                <volist name="pc_desktop" id="v">
+                    <div class="pc">
+                        <div class="pc_img">
+                            <img src="{{$v.thumb}}.gif" width="152" height="105">
+                        </div>
+                        <div class="pc_wenzi">
+                            <a href={{:U("home/index/goods","id=$v[id]")}}>{{$v.name}}</a>
+                        </div>
+                        <div class="sale">
+                            ￥{{$v.price}}.00
+                        </div>
+                    </div>
+                </volist>
+	 		</div><!--right到此结束 -->
+	 		<div class="clear"></div>
+	 	</div>	<!--top_c到此结束 -->
+	 	<div class="top_c">
+	 		<div class="c_left">
+	 			<div class="left_shang">
+	 					<p>平板超人</p>
+	 					<a href="#">more</a>
+	 			</div>
+	 			<div class="left_zhong">
+	 				<a href="">【华硕】</a>
+	 				<a href="">【联想】</a>
+	 				<a href="">【三星】</a>
+	 				<a href="">【戴尔】</a>
+	 				<a href="">【ThinkPad】</a>
+	 			</div>
+	 			<div class="left_xia">
+	 				<div class="xia_tu">
+	 				<img src="__PUBLIC__/img/tutu_07.gif"></div>
+	 				<div class="jieshao">
+                        <a href="">戴尔Inter14MR-1528S灵越14英寸笔记本电脑</a>
+	 				</div>
+	 				<div class="sale">￥4699.00</div>
+	 			</div>
+	 		</div><!--left到此结束 -->
+	 		<div class="c_right">
+                <volist name="pc_table" id="v">
+                    <div class="pc">
+                        <div class="pc_img">
+                            <img src="{{$v.thumb}}.gif">
+                        </div>
+                        <div class="pc_wenzi">
+                            <a href={{:U("home/index/goods","id=$v[id]")}}>{{$v.name}}</a>
+                        </div>
+                        <div class="sale">
+                            ￥{{$v.price}}.00
+                        </div>
+                    </div>
+                </volist>
+	 		</div><!--right到此结束 -->
+	 		<div class="clear"></div>
+	 	</div>	<!--top_c到此结束 -->
+	 </div>	<!--主体到此结束 -->
+</div>
+
+</block>

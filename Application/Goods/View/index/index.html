@@ -1,0 +1,41 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>商品分类</h4>
+    </div>
+    <a href={{:U("goods/index/add_goods_cate")}}>
+        <button type="button" class="btn btn-primary">新增分类</button>
+    </a>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">商品分类</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>分类名称</th>
+                    <th>排序</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="glist" id="v">
+                    <tr>
+                        <td>
+                            <for start="1" end="$v['count']">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </for>
+                            {{$v.name}}
+                        </td>
+                        <td>{{$v.sort}}</td>
+                        <td><a href={{:U("goods/index/edit_goods_cate","id=$v[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("goods/index/del_goods_cate","id=$v[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                            <a href=""><span class="glyphicon glyphicon-plus"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

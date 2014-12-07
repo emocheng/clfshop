@@ -1,0 +1,515 @@
+.user_menu{
+    width: 132px;
+    float: left;
+}
+.user_menu ul{
+    margin-top: 10px;
+    border: 1px solid #e82929;
+    width: 80px;
+    padding: 12px 25px;
+    background: #fff;
+}
+.user_menu ul li{
+    list-style:none;
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+.user_menu ul li a:hover{
+    color: #e82929;
+}
+.user_main{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 20px;
+
+}
+
+.user_info_img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.user_info_name{
+    float: left;
+}
+.user_info_name p{
+    color:black;
+    font-size: 14px;
+    padding: 0 10px 10px 10px;
+
+}
+.user_info{
+    padding-right: 40px;
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+.user_pay{
+    float: left;
+    padding-left: 40px;
+    padding-right: 227px;
+}
+.welcome_user{
+    background:#fff;
+    padding: 40px;
+    float:left;
+}
+
+.user_pay p{
+    color:black;
+    font-size: 14px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+}
+
+.user_pay p span{
+    padding-left: 5px;
+    color:red;
+}
+.user_view{
+    margin-top: 20px;
+    background:#fff;
+    padding-bottom: 20px;
+}
+.user_view p{
+    color:#e82020;
+    font-size: 14px;
+    padding: 10px 32px;
+    border-bottom: 1px solid #ddd;
+}
+.view_pc{
+    background: #fff;
+    padding: 60px 0;
+}
+.view_pc ul{
+    list-style: none;
+    position: relative;
+    top: -34px;
+}
+.view_pc ul li{
+    float: left;
+    padding: 0 18px;
+}
+.view_pc ul li:first-child{
+    padding-top: 14px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    float: left;
+}
+.view_pc ul li:last-child{
+    float: left;
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.view_pc ul li a{
+
+}
+.view_pc ul li p {
+    color:black;
+    padding: 4px 18px;
+    border-bottom: none;
+}
+.user_info_edit{
+    width: 663px;
+    background: #fff;
+}
+
+.user_info_edit p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.user_info_edit a {
+    position: relative;
+    top:100px;
+    left: 200px;
+}
+.user_head_img{
+    width: 120px;
+    margin: 30px auto;
+}
+.user_table{
+    margin: 10px auto;
+    padding: 10px;
+}
+.user_table tr{
+    line-height:30px;
+}
+.user_level{
+    color: red;
+}
+.user_goods{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+
+.user_goods p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.my_goods{
+    margin: 20px;
+    line-height: 14px;
+    text-align: center;
+    border: 1px solid #f2f2f2;
+    color: #333;
+    width: 94%;
+}
+.my_goods td{
+    border: 1px solid #f2f2f2;
+    padding: 10px 5px;
+}
+.my_goods p{
+    padding: 0;
+    border: none;
+    font-size: 12px;
+}
+.car{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.car p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.car_title{
+    margin-top: 20px;
+    float: left;
+    padding: 10px 0;
+    background: #f5f4f8;
+}
+.car_title ul{
+    list-style: none;
+    float: left;
+
+}
+.car_title ul li:first-child{
+    padding-left: 2px;
+    padding-right: 121px
+}
+.car_title ul li{
+    font-size: 14px;
+    float: left;
+    padding-right: 90px;
+}
+.car_title ul li:last-child{
+    position: relative;
+    left: 22px;
+}
+.my_car{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 14px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.my_car td{
+
+    padding: 10px 5px;
+    width: 20%;
+}
+.check{
+    position: relative;
+    top: -29px;
+    left: -4px;
+}
+.btn-reduce{
+    border: 1px solid #ccc;
+    padding: 4px;
+    text-align: center;
+}
+.btn-add{
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    text-align: center;
+}
+.text{
+    width: 30px;
+    height: 16px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    text-align: center;
+}
+.sum_car{
+    padding: 10px;
+    margin:20px 40px;
+    font-size: 14px;
+}
+.sum_car span{
+    color: red;
+}
+.sum_car .submit{
+    border: none;
+    background: red;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.collect{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.collect p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.point{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.point p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.point p span{
+    color: red;
+}
+.my_point{
+    margin-top: 20px;
+}
+.my_point a{
+    display: block;
+    font-size: 14px;
+    color: red;
+    padding: 10px;
+}
+.point_sign{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #f5f4f8;
+    list-style: none;
+
+}
+.point_sign li:first-child{
+    width: 30%;
+    position: relative;
+    left: 30px;
+}
+.point_sign li:last-child{
+    width: 30%;
+    position: relative;
+    right: -40px;
+}
+.point_sign li{
+    width: 20%;
+    float: left;
+}
+.point_table{
+    width:100%;
+    margin-top: 20px;
+    line-height: 14px;
+    border-bottom: 1px solid #f2f2f2;
+
+}
+.point_table td{
+    width: 20%;
+}
+.point_table td:first-child{
+    width: 30%;
+
+}
+.point_table td:last-child{
+    width: 40%;
+}
+.my_comm{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.my_comm p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.my_comm_bord{
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+.my_comm_bord h3{
+    color: #666666;
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+.my_comm_bord h3 a{
+    float: right;
+}
+.my_comm_bord h3 a:hover{
+    color: red;
+}
+.my_comm_bord h4{
+    color: #666666;
+    line-height: 24px;
+    padding: 2px 10px;
+}
+.my_comm_bord h4 i{
+    float: right;
+}
+.money_manage{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.money_manage p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.my_m_m{
+    padding: 30px;
+}
+.my_m_m h3{
+    padding: 10px 0;
+}
+.my_m_m h3 span{
+    color: red;
+}
+.my_m_s{
+    margin-top: 20px;
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.my_m_s h3{
+    padding: 10px 30px;
+}
+.my_m_s ul{
+    background: #ddd;
+    width: 100%;
+    float: left;
+    list-style: none
+}
+.my_m_s ul li {
+    float: left;
+    padding: 10px 0;
+    width: 20%;
+}
+.my_m_s ul li:first-child{
+    position: relative;
+    left: 26px;
+}
+.my_m_table{
+    width:100%;
+    margin-top: 20px;
+    line-height: 14px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.my_m_table td{
+    padding: 10px 0;
+    width: 20%;
+}
+.my_m_table td:last-child{
+    color: red;
+}
+.address{
+    width: 663px;
+    background: #fff;
+    padding-bottom: 20px;
+}
+.address p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.my_address_bord{
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+}
+.my_address_bord h3{
+    color: #666666;
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+.my_address_bord h3 a{
+    float: right;
+    padding: 0 10px;
+}
+.my_address_bord h3 a:hover{
+    color: red;
+}
+.my_address_bord h4{
+    color: #666666;
+    line-height: 24px;
+    padding: 2px 10px;
+}
+.add_address{
+    width: 100%;
+}
+.add_address p{
+    padding: 10px 30px;
+    color:black;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+.add_m_a_table{
+    font-size: 14px;
+    line-height: 32px;
+    margin:10px auto;
+}
+
+
+.new_address_btn{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 5px 20px;
+    background: red;
+    color: #fff;
+}
+.in_money{
+    margin-top: 20px;
+    display: none;
+}
+.in_active{
+    display: block;
+}
+.pay{
+    margin: 20px;
+    float: right;
+}
+.pay_ready{
+
+}
+.pay_ready p{
+    border: none;
+}
+.pay_ready span{
+    color: red;
+}
+.pay_ok{
+    border: none;
+    padding: 10px;
+    background: red;
+    color: #fff;
+
+}
+input[type="submit"]:disabled {
+    background: rgba(0,0,0,.15);
+    border: 1px solid rgba(0,0,0,.15);
+    color: rgba(0,0,0,.15);
+}

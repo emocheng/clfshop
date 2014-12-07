@@ -1,0 +1,95 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">修改栏目</a></li>
+            <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">栏目内容</a></li>
+        </ul>
+        <div class="panel-body">
+            <!-- Tab panes -->
+            <form action={{:U("article/index/post_edit_column","id=$e[id]")}} method="post">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <table class="table table-hover">
+                            <tr>
+                                <td>父栏目</td>
+                                <td>
+                                    <select class="form-control" name="pid">
+                                        <option value="0">顶级栏目</option>
+                                        <volist name="alist" id="vo">
+                                            <option value="{{$vo.id}}" <eq name="e.pid" value="$vo.id">selected</eq>>
+                                                <for start="1" end="$vo['count']">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </for>
+                                                {{$vo.name}}
+                                            </option>
+                                        </volist>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>名称</td>
+                                <td>
+                                    <input type="text" class="form-control" value={{$e.name}} name="name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>类型</td>
+                                <td>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="type" id="optionsRadios1" value="0" <eq name="e.type" value="0">checked</eq>>
+                                            封面
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="type" id="optionsRadios2" value="1" <eq name="e.type" value="1">checked</eq>>
+                                            列表
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="type" id="optionsRadios3" value="2" <eq name="e.type" value="2">checked</eq>>
+                                            URL跳转
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>URL跳转地址</td>
+                                <td>
+                                    <input type="text" name="url" class="form-control" placeholder="如果选了URL跳转,请填写跳转地址">
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" class="btn btn-primary" value="修改">
+                        <button type="button" class="btn btn-success">返回</button>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <textarea name="content" class="content">{{$e.content}}</textarea>
+                        <div style="margin-top: 20px;">
+                            <input type="submit" class="btn btn-primary" value="修改">
+                            <button type="button" class="btn btn-success">返回</button>
+                        </div>
+                        <script src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+                        <script type="text/javascript" src="__PUBLIC__/ckfinder/ckfinder.js"></script>
+                        <script>
+                            CKEDITOR.replace('content',
+                                    {
+                                        filebrowserBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html',
+                                        filebrowserImageBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Images',
+                                        filebrowserFlashBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Flash',
+                                        filebrowserUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                                        filebrowserImageUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                                        filebrowserFlashUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                                    });
+                        </script>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</block>

@@ -1,0 +1,39 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>文章分类</h4>
+    </div>
+    <a href={{:U("article/index/add_assortment")}}><button type="button" class="btn btn-primary">新增分类</button></a>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">文章分类</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>排序</th>
+                    <th>名称</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="alist" id="vo">
+                    <tr>
+                        <td>{{$vo.sort}}</td>
+                        <td>
+                            <for start="1" end="$vo['count']">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </for>
+                            {{$vo.name}}
+                        </td>
+                        <td><a href={{:U("article/index/edit_column","id=$vo[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("article/index/del_column","id=$vo[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                            <a href=""><span class="glyphicon glyphicon-plus"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

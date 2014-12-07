@@ -1,0 +1,178 @@
+.list_lift{
+		width:149px;
+		background-color: #fff;
+		padding:10px 20px;
+		float: left;
+		margin-top: 20px;
+	}
+	.list_right{
+		width:613px;
+		float: right;
+		margin-top: 20px;
+	}
+	.list_lift ul{
+		list-style: none;
+	}
+	.list_lift ul li{
+		padding-top:10px;
+		border-bottom: 1px solid #eeedf3;
+		font-size: 14px;
+		color:#666666;
+
+	}
+	.list_lift ul li table{
+		padding: 8px 0;
+
+	}
+	.list_lift ul li table td{
+		padding: 4px 10px 4px 0;
+		font-size: 12px;
+	}
+	.hot{
+		background-color: #fff;
+		
+	}
+	.hot_text{
+		padding: 10px;
+
+		border-bottom: 2px solid #e82020;
+	}
+	.hot_pc{
+		padding: 20px;
+	}
+	.hot_pcone{
+		float: left;
+		margin:0 26px;
+	}
+	.hot_tu{
+		padding: 0 21px;
+	}
+	.hot_tu_jieshao{
+		
+		padding:10px 0;
+	}
+	.hot_jiage span{
+		color:#e82020;
+	}
+    .shaixuan{
+
+        margin-bottom: 10px;
+    }
+    .shaixuan_list p{
+        padding:10px;
+        color:black;
+    }
+    .shaixuan_list ul{
+        list-style: none;
+    }
+    .shaixuan_list ul li{
+        width: 20%;
+        float: left;
+        padding: 4px 10px;
+        position: relative;
+        left: 42px;
+        top: -27px;
+    }
+    .shaixuan_list ul li a:hover{
+        color:red;
+    }
+	.qianggou{
+		margin-top:4px;
+	}
+	.qianggou a{
+		height: 16px;
+		display: block;
+		padding-top:5px;
+		text-align: center;
+		color: #fff;
+		background-color: #e82020;
+	}
+	.right_list{
+		margin-top: 13px;
+		padding: 10px 10px 20px 10px;
+		background-color: #fff;
+	}
+	
+	dt {
+    
+    font-weight: bold;
+    line-height: 16px;
+    padding: 4px 3px;
+    text-align: center;
+    width: 76px;
+}
+dd{
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    width: 500px;
+}
+em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 14px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+.paixu{
+	margin-top: 13px;
+	padding: 10px;
+	background-color: #fff;
+}
+.paixu_1{
+	color:#666; 
+	float: left;
+}
+.paixu_1 a{
+    position: relative;
+    top: 8px;
+}
+
+.paixu_2 a{
+    border: 1px solid #666;
+    padding: 8px;
+    float: left;
+    margin: 0 5px;
+}
+.paixu_2 a:hover{
+    background: #e82020;
+    color:#fff;
+}
+.right_pc{
+	margin-top:20px;
+	width:620px;
+
+}
+.pc_levl{
+	float: left;
+	margin:0 6px 20px 0px;
+	background-color: #fff;
+    height: 278px;
+	width: 200px;
+	
+}
+.pc_main{
+	padding: 10px;
+}
+.say{
+	margin: 10px 0;
+}
+.botm{
+
+}
+.botm a:first-child {
+	padding: 13px 11px;
+	border-left: none;
+
+}
+.botm a{
+	float: left;
+	display: block;
+	border-top: 1px solid #e7e6e6;
+	border-left: 1px solid #e7e6e6;
+	background-color: #f9f9f9;
+	padding: 13px 17px;
+
+}

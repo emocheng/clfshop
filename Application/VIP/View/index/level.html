@@ -1,0 +1,66 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>会员等级</h4>
+    </div>
+    <a href={{:U("vip/index/add_level")}}><button type="button" class="btn btn-primary">新增等级</button></a>
+
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">会员列表</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+
+                    <th>会员等级名称</th>
+                    <th>积分下限</th>
+                    <th>积分上限</th>
+                    <th>初始折扣率%</th>
+                    <th>特殊会员</th>
+                    <th>显示价格</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="lv" id="v">
+                    <tr>
+                        <td>{{$v.name}}</td>
+                        <td>{{$v.low_score}}</td>
+                        <td>{{$v.up_score}}</td>
+                        <td>{{$v.agio}}</td>
+                        <td>
+                            <eq name="v.special_vip" value="0">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                <else/>
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </eq>
+                        </td>
+                        <td>
+                            <eq name="v.display_price" value="0">
+                                <span class="glyphicon glyphicon-remove"></span>
+                                <else/>
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </eq>
+                        </td>
+                        <td><a href={{:U("vip/index/edit_level","id=$v[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("vip/index/del_level","id=$v[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </nav>
+</block>

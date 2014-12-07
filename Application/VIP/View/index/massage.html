@@ -1,0 +1,53 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>会员留言</h4>
+    </div>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">留言列表</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" value="">编号</th>
+                    <th>会员姓名</th>
+                    <th>留言标题</th>
+                    <th>类型</th>
+                    <th>留言时间</th>
+                    <th>状态</th>
+                    <th>回复</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <volist name="m" id="v">
+                        <td><input type="checkbox" value="">{{$v.id}}</td>
+                        <td>{{$v.name}}</td>
+                        <td>{{$v.content}}</td>
+                        <td>{{$v.type}}</td>
+                        <td>{{$v.time}}</td>
+                        <td>{{$v.display}}</td>
+                        <td>{{$v.stat}}</td>
+                        <td><a href=""><span class="glyphicon glyphicon-zoom-in"></span></a>
+                            <a href={{:U("vip/index/del_massage","id=$v[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                    </td>
+                    </volist>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </nav>
+</block>

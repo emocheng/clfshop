@@ -1,0 +1,67 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="user_goods">
+        <p>付款页面</p>
+
+        <volist name="ac" id="v">
+            <table class="my_goods">
+                <tr>
+                    <td>
+                        <img src="{{$v.thumb}}.gif" width="99" height="68"/>
+                    </td>
+                    <td>
+                        <p>数量</p>
+                        <p>{{$v.count}}件</p>
+                    </td>
+                    <td>
+                        <p>单价</p>
+                        <p>￥{{$v.price}}</p>
+                    </td>
+                    <td><a href="">查看</a>|<a href="">删除</a></td>
+                </tr>
+            </table>
+        </volist>
+
+        <hr style="border:0;background-color:#ddd;height:1px;"/>
+        <div class="my_address_bord">
+            <h3><span>{{$ad.username}}</span>
+                <a href="">修改地址信息</a>
+            </h3>
+            <h4>收货人:<span>{{$ad.username}}</span></h4>
+            <h4>地址:<span>{{$ad.address}}</span></h4>
+            <h4>手机:<span>{{$ad.userphone}}</span></h4>
+        </div>
+        <hr style="border:0;background-color:#ddd;height:1px;"/>
+        <div class="pay_ready">
+            <p>应付金额:<span>{{$pay_sum}}</span></p>
+            <p>您的余额:<span>{{$my_money_sum}}</span></p>
+        </div>
+        <div class="pay">
+            <button class="pay_ok">确认付款</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script>
+        $(function(){
+            $(".pay_ok").click(function(){
+                var pay_sum = {{$pay_sum}};//定义应付金额
+                var my_money= {{$my_money_sum}}; //定义自己的余额
+
+                if(pay_sum>my_money){
+                    alert("您的余额不足，请充值");
+                    return false;
+                }
+                //var new_money = my_money-pay_sum; //购买商品后余额
+
+                $.post("{{:U(account_ajax)}}", {
+                    money_sum : pay_sum,
+
+                }, function(data){
+                        console.log(data);
+                    window.location.href="{{:U('user/index/index')}}";
+                }, "html")
+
+            })
+        })
+    </script>
+</block>

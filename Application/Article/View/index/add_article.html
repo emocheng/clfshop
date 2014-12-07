@@ -1,0 +1,67 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>添加文章</h4>
+    </div>
+    <form class="form-horizontal" role="form" action={{:U("article/index/post_add_article")}} method="post">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">文章标题:</label>
+            <div class="col-sm-10">
+                <input type="text" name="title" class="form-control" placeholder="输入文章标题">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">文章分类</label>
+            <div class="col-sm-10">
+                <select class="form-control" name="cid">
+                    <volist name="alist" id="vo">
+                    <option value="{{$vo.id}}">
+                        <for start="1" end="$vo['count']">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </for>
+                        {{$vo.name}}
+                    </option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">文章内容</label>
+            <div class="col-sm-10">
+                <textarea name="content" class="content"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">确定</button>
+            </div>
+        </div>
+    </form>
+    <!--图片上传与文本编辑-->
+    <script src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ckfinder/ckfinder.js"></script>
+    <script>
+        CKEDITOR.replace('content',
+                {
+                    filebrowserBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html',
+                    filebrowserImageBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Images',
+                    filebrowserFlashBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Flash',
+                    filebrowserUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                    filebrowserImageUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                    filebrowserFlashUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                });
+
+        function BrowseServer(thumb, img_show) {
+            var finder = new CKFinder();
+            //当选中图片时执行的函数
+            finder.selectActionFunction = function(fileUrl){
+                $("#"+thumb).val(fileUrl);
+                $("#"+img_show).attr("src",""+fileUrl+"");
+            }
+
+            finder.popup();//调用窗口
+        }
+
+    </script>
+</block>

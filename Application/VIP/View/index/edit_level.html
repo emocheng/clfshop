@@ -1,0 +1,62 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>修改等级</h4>
+    </div>
+    <div style="width:50%">
+        <form class="form-horizontal" role="form" action={{:U("vip/index/post_edit_level","id=$e_l[id]")}} method="post">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">会员等级名称</label>
+                <div class="col-sm-10">
+                    <input type="text" name ="name" class="form-control" value={{$e_l.name}}>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">等级下限</label>
+                <div class="col-sm-10">
+                    <input type="text" name ="low_score" class="form-control"value="{{$e_l.low_score}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">等级上限</label>
+                <div class="col-sm-10">
+                    <input type="text" name ="up_score" class="form-control" value="{{$e_l.up_score}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">折扣率(%)</label>
+                <div class="col-sm-10">
+                    <input type="text" name ="agio" class="form-control" value="{{$e_l.agio}}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">特殊会员</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="special_vip" value="0" <eq name="e_l.special_vip" value="0">checked</eq>> 否
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="special_vip" value="1"<eq name="e_l.special_vip" value="1">checked</eq>> 是
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">显示价格</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="display_price"value="0" <eq name="e_l.display_price" value="0">checked</eq>> 否
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="display_price" value="1" <eq name="e_l.display_price" value="1">checked</eq>> 是
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</block>

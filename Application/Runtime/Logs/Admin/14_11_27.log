@@ -1,0 +1,12 @@
+[ 2014-11-27T12:15:48+08:00 ] 127.0.0.1 /index.php?m=admin&c=index&a=add_goods
+ERR: 非法操作:add_goods
+
+[ 2014-11-27T12:16:11+08:00 ] 127.0.0.1 /index.php?m=admin&c=goods&a=add_goods
+ERR: 无法加载控制器:Goods
+
+[ 2014-11-27T12:16:29+08:00 ] 127.0.0.1 /index.php?m=admin&c=goods&a=add_goods
+ERR: 无法加载控制器:Goods
+
+[ 2014-11-27T12:16:31+08:00 ] 127.0.0.1 /index.php?m=admin&c=goods&a=add_goods
+ERR: 无法加载控制器:Goods
+

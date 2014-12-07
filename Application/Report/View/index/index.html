@@ -1,0 +1,56 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>客户统计</h4>
+    </div>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">会员购买率</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>会员总数</th>
+                    <th>有订单会员数</th>
+                    <th>会员订单总数</th>
+                    <th>会员购买率</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>25%</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">
+            每会员平均订单数及购物额
+            (每会员订单数=会员订单总数/会员总数)
+            (每会员购物额=会员购物总额/会员总数)
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>会员购物总额</th>
+                    <th>每会员订单数</th>
+                    <th>每会员购物额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>42321</td>
+                    <td>0.75</td>
+                    <td>5008.21</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

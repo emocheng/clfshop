@@ -1,0 +1,47 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>会员列表</h4>
+    </div>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">会员列表</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" value="">全选</th>
+                    <th>会员姓名</th>
+                    <th>会员密码</th>
+                    <th>会员等级</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="u" id="v">
+                    <tr>
+                        <td><input type="checkbox" value=""></td>
+                        <td>{{$v.name}}</td>
+                        <td>{{$v.password}}</td>
+                        <td>{{$v.level_name}}</td>
+                        <td><a href={{:U("vip/index/edit_vip","id=$v[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("vip/index/del_vip","id=$v[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </nav>
+</block>

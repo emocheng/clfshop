@@ -1,0 +1,40 @@
+[ 2014-12-07T21:02:16+08:00 ] 127.0.0.1 /index.php?m=User&c=Index&a=account_ajax
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001626s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000182s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `my_money` [ RunTime:0.001716s ]
+SQL: INSERT INTO `my_money` (`money`,`time`,`type`,`mid`) VALUES (-4999,1417957336,'消费',4) [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001479s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.002024s ]
+SQL: SELECT goods_car.uid AS uid,goods_car.gid AS gid,goods_car.count AS count,goods.id AS id,goods.name AS name,goods.thumb AS thumb,goods.price AS price FROM goods_car goods_car  JOIN goods goods ON goods_car.gid=goods.id WHERE ( uid=4 )  [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.001652s ]
+SQL: SELECT MAX(sn) AS tp_max FROM `order` LIMIT 1   [ RunTime:0.000173s ]
+SQL: INSERT INTO `order` (`oid`,`sn`,`uid`,`count`) VALUES (9,10001,4,1) [ RunTime:0.000476s ]
+SQL: DELETE FROM `goods_car` WHERE ( uid=4 ) [ RunTime:0.000456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2014-12-07T21:04:54+08:00 ] 127.0.0.1 /index.php?m=User&c=Index&a=account_ajax
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001794s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000191s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `my_money` [ RunTime:0.001457s ]
+SQL: INSERT INTO `my_money` (`money`,`time`,`type`,`mid`) VALUES (-2999,1417957494,'消费',4) [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001489s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.002025s ]
+SQL: SELECT goods_car.uid AS uid,goods_car.gid AS gid,goods_car.count AS count,goods.id AS id,goods.name AS name,goods.thumb AS thumb,goods.price AS price FROM goods_car goods_car  JOIN goods goods ON goods_car.gid=goods.id WHERE ( uid=4 )  [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `order` [ RunTime:0.001652s ]
+SQL: SELECT MAX(sn) AS tp_max FROM `order` LIMIT 1   [ RunTime:0.000151s ]
+SQL: INSERT INTO `order` (`oid`,`sn`,`uid`,`time`,`count`) VALUES (18,10002,4,1417957494,1) [ RunTime:0.000469s ]
+SQL: DELETE FROM `goods_car` WHERE ( uid=4 ) [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000647s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+

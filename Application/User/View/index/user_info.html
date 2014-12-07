@@ -1,0 +1,36 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="user_info_edit">
+        <p>个人信息</p>
+
+        {{$user_info.name}}
+        <a href="">我的头像</a>
+        <div class="user_head_img">
+            <img src="__PUBLIC__/img/head_03.gif"/>
+        </div>
+        <form action={{:U("user/index/post_user_info","id=$u_f[id]")}} method="post">
+            <table class="user_table">
+                <tr>
+                    <td>会员等级:</td>
+                    <td class="user_level">{{$u_f.level_name}}</td>
+                </tr>
+                <tr>
+                    <td>用户名:</td>
+                    <td><input type="text" name="name"/></td>
+                </tr>
+
+                <tr>
+                    <td>邮箱:</td>
+                    <td><input type="text" name="email"/></td>
+                </tr>
+                <tr>
+                    <td>手机:</td>
+                    <td><input type="text" name="phone"/></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="提交"/></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</block>

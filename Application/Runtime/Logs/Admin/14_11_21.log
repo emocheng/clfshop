@@ -1,0 +1,3 @@
+[ 2014-11-21T15:32:50+08:00 ] 127.0.0.1 /index.php?m=Admin&c=goodsmanage&a=index
+ERR: 无法加载控制器:Goodsmanage
+

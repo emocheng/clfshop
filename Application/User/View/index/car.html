@@ -1,0 +1,82 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="car">
+        <p>我的购物车</p>
+        <div class="car_title">
+            <ul>
+                <li><input  type="checkbox"/>全选</li>
+                <li>商品信息</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <volist name="c" id="v">
+            <table class="my_car">
+                <tr>
+                    <td>
+                        <input class="check" type="checkbox"/>
+                        <img src="{{$v.thumb}}.gif" width="99" height="68">
+                    </td>
+                    <td><a href={{:U("home/index/goods","id=$v[gid]")}}>{{$v.name}}</a></td>
+                    <td>￥<span>{{$v.price}}</span></td>
+                    <td>
+                        <a class="btn-add" href="javascript:;" type="{{$v.gid}}">+</a>
+                        <input class="text" id="buy-num" value="{{$v.count}}">
+                        <a class="btn-reduce" href="javascript:;" type="{{$v.gid}}">-</a>
+                    </td>
+                    <td><a href="">删除</a>|<a href="">收藏</a></d>
+                </tr>
+            </table>
+        </volist>
+        <div class="sum_car">
+            <span class="sum_count">{{$sum_count}}</span>件商品&nbsp&nbsp&nbsp&nbsp总计:￥<span class="sum_money">{{$sum_money}}</span>
+            <br/>
+            <a href={{:U("user/index/account")}}><input class="submit" type="submit" value="去结算" <eq name="c" value="">disabled</eq>/></a>
+        </div>
+    </div>
+        <script>
+            $(function(){
+                $(".btn-add").click(function(){
+                    var $v = $(this).attr("type"); //获取商品的gid值
+                    var $a = $(this).next();
+                    var m = $(this).parent().prev().children("span").text(); //获取商品单价
+                    var count_money =parseFloat($(".sum_money").text())+parseFloat(m); //获取总价格
+                    $(".sum_money").text(count_money);
+                    $b = $a.val();  //获取商品数量
+                    $b++;
+                    $a.val($b); //把$b的值传入输入框里的
+                    $.post("{{:U('car_ajax')}}",{
+                        count : $b,
+                        gid : $v
+                    }, function(data){
+                        console.log(data);
+                        $(".sum_count").text(data);
+                    }, "html")
+                })
+
+                $(".btn-reduce").click(function(){
+                    var $v = $(this).attr("type"); //获取商品的gid值
+                    var $a = $(this).prev();
+                    var m = $(this).parent().prev().children("span").text(); //获取商品单价
+                    $b = $a.val();  //获取商品数量
+                    $b--;
+                    if($b==0){
+                        $(".sum_money").text(count_money);
+                        return false;
+                    }
+                    var count_money =parseFloat($(".sum_money").text())-parseFloat(m); //获取总价格
+                    $(".sum_money").text(count_money);
+                    $a.val($b);
+                    $.post("{{:U('car_ajax')}}",{
+                        count : $b,
+                        gid : $v
+                    }, function(data){
+                        console.log(data);
+                        $(".sum_count").text(data);
+                    }, "html")
+                })
+            })
+        </script>
+</block>

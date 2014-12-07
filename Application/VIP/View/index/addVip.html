@@ -1,0 +1,82 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>添加会员</h4>
+    </div>
+    <div style="width:50%">
+        <form class="form-horizontal" role="form" action={{:U("vip/index/post_add_vip")}} method="post">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">会员名称:</label>
+                <div class="col-sm-10">
+                    <input type="text" name ="name" class="form-control" placeholder="输入会员姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">邮箱地址:</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">登陆密码</label>
+                <div class="col-sm-10">
+                    <input type="password" name ="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">确认密码</label>
+                <div class="col-sm-10">
+                    <input type="password" name ="repassword" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">会员等级</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="level">
+                        <volist name="lv" id="v">
+                        <option value={{$v.id}}>{{$v.name}}</option>
+                        </volist>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">性别</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="sex" id="inlineRadio1" value="0"> 保密
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="sex" id="inlineRadio2" value="1"> 男
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="sex" id="inlineRadio3" value="2"> 女
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">信用额度:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="money" class="form-control" placeholder="输入信用额度">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">手机号码:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="phone" class="form-control" placeholder="输入手机号码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">住址</label>
+                <div class="col-sm-10">
+                    <textarea name="address" style="width: 100%;border: solid 1px #ccc;resize: none;"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</block>

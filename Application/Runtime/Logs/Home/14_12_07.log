@@ -1,0 +1,11 @@
+[ 2014-12-07T21:04:41+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001764s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000264s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001683s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=18 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: INSERT INTO `goods_car` (`uid`,`gid`) VALUES (4,18) [ RunTime:0.000531s ]
+

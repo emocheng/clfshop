@@ -1,0 +1,128 @@
+<extend name="./Public/layout_home.html" />
+
+<block name="container">
+	 	<div class="path"><a>首页</a>><a>产品分类</a>>
+	 		<a>笔记本</a>><a>ThinkPad E531</a>
+	 	</div>
+	 	<div class="goods_main">
+	 		<div class="goods_main_sale">
+	 			<div class="goods_pic">
+	 				<div class="goods_pic_big">
+	 					<img src="{{$g.thumb}}.gif" width="341" height="235">
+	 				</div>
+	 				<div class="goods_pic_small">
+	 					<div class="pic_bt"><img src="__PUBLIC__/img/bt_l.gif"></div>
+	 					<div class="pic_sma"><img src="__PUBLIC__/img/sm_01.gif"></div>
+	 					<div class="pic_sma"><img src="__PUBLIC__/img/sm_02.gif"></div>
+	 					<div class="pic_sma"><img src="__PUBLIC__/img/sm_03.gif"></div>
+	 					<div class="pic_sma"><img src="__PUBLIC__/img/sm_04.gif"></div>
+	 					<div class="pic_sma"><img src="__PUBLIC__/img/sm_05.gif"></div>
+	 					<div class="pic_bt"><img src="__PUBLIC__/img/bt_r.gif"></div>
+	 				</div>
+	 				<div class="clear"></div>
+	 				<div class="pic_more">
+	 					<div class="check_pic">
+	 						<img src="__PUBLIC__/img/fangda_37.gif">
+	 						<a href="">查看大图</a>
+	 					</div>
+	 					<div class="check_pic duibi">
+	 						<input type="checkbox">
+	 						<a href="">加入对比</a>
+	 					</div>
+	 					<div class="shar">
+	 						分享到:
+	 						<img src="__PUBLIC__/img/weibo_40.gif">
+	 						<img src="__PUBLIC__/img/tenxun_42.gif">
+	 						<img src="__PUBLIC__/img/renren_44.gif">
+	 					</div>
+	 				</div>
+	 				<div class="clear"></div>
+	 			</div>
+	 		</div>
+
+	 		<div class="goods_right">
+	 				<div class="goods_name">
+                        {{$g.name}}
+	 				</div>
+	 				<div class="qianggou">
+	 					<p>[限时抢购]全新时尚超薄E系列,配8系2G独显,工作娱乐两不误</p>
+	 				</div>
+	 				<div class="hr"></div>
+	 				<div class="goods_info">
+	 					<p>商品编码:<span>{{$g.sn}}</span></p>
+	 					<p>市场价格:<span>￥{{$g.price}}.00</span></p>
+	 					<p>长乐价:<span>￥{{$g.price}}.00</span></p>
+	 					<p>商品评价:<span></span></p>
+	 					<div class="hr"></div>
+	 					<p>促销信息:<span>已优惠￥200.00元</span></p>
+	 					<p>剩余时间:<span>101天10小时32分18秒</span></p>
+	 					<div class="hr"></div>
+	 				</div>
+	 				<div class="sale_info">
+	 					<a href="javascript: void 0;" class="add_car">加入购物车</a>
+	 					<a href="">加入收藏</a>
+	 				</div>
+
+	 		</div>
+	 		<div class="clear"></div>
+	 	</div>
+	 	<div class="goods_content">
+	 		<div class="goods_tags">
+	 			<div>商品详情</div>
+	 			<div>商品参数</div>
+	 		</div>
+	 		<div class="do"></div>
+	 		
+	 			<ul class="goods_con_info">
+	 				<li>商品名称:{{$g.name}}</li>
+	 				<li>商品编号:{{$g.sn}}</li>
+	 				<li>品牌:{{$g.logo}}</li>
+	 				<li>上架时间:2014年</li>
+	 				<li>商品毛重:{{$g.weight}}</li>
+	 				<li>商品产地:{{$g.place}}</li>
+	 				<li>显卡:性能级显卡</li>
+	 				<li>触控:{{$g.touch}}</li>
+	 				<li>厚度:{{$g.t}}</li>
+	 				<li>处理器:{{$g.cpu}}</li>
+	 				<li>尺寸:{{$g.size}}</li>
+	 			</ul> 			
+	 		<div class="goods_common">
+	 			<div class="g_c_t">用户评价</div>
+	 			<div class="hr" style="margin:0"></div>
+	 			<div class="user_common">
+	 				<div class="user_img"><img src="__PUBLIC__/img/admin_03.gif"></div>
+	 				<div class="user_common_i">
+	 					<div class="user_star"><img src="__PUBLIC__/img/star_07.gif"></div>
+	 					<div class="user_common_s">质量不错</div>
+	 				</div>
+	 				<div class="clear"></div>
+	 			</div>
+	 		</div>
+	 		<div class="tell_page">
+				<a href="">上一页</a>
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				<a href="">...</a>
+				<a href="">46</a>
+				<a href="">下一页</a>
+			</div>
+	 		<div class="clear"></div>
+	 	</div>
+	</div>
+</div>
+    <script>
+        $(function(){
+            $(".add_car").click(function(){
+                $.post("{{:U('post_add_car')}}",{
+                    gid : {{$id}}
+                }, function(data){
+                    console.log(data);
+                    alert(data.info);
+                }, "json")
+            })
+        })
+    </script>
+</block>

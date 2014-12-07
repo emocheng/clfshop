@@ -1,0 +1,102 @@
+<extend name="./Public/layout_admin.html" />
+<block name="content">
+    <div class="page-header">
+        <h4>商品修改</h4>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-2">
+                        <select class="form-control">
+                            <option>所有分类</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control">
+                            <option>所有品牌</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <select class="form-control">
+                            <option>价格</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" placeholder="关键字">
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-primary">搜索</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <button type="button" class=" btn btn-primary">
+        <a href={{:U("goods/index/add_goods")}} style="color: #fff">添加商品</a>
+    </button>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">商品修改</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>商品名称</th>
+                    <th>货号</th>
+                    <th>价格</th>
+                    <th>类别</th>
+                    <th>上架</th>
+                    <th>精品</th>
+                    <th>排序</th>
+                    <th>库存</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="eg" id="v">
+                    <tr>
+                        <td><input type="checkbox">1</td>
+                        <td>{{$v.name}}</td>
+                        <td>{{$v.sn}}</td>
+                        <td>{{$v.price}}</td>
+                        <td>{{$v.goods_cate}}</td>
+                        <td>
+                            <eq name="v.shelve" value="1">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                <else/>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </eq>
+                        </td>
+                        <td>
+                            <eq name="v.cp" value="1">
+                                <span class="glyphicon glyphicon-ok"></span>
+                                <else/>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </eq>
+                        </td>
+                        <td>99</td>
+                        <td>44</td>
+                        <td><a href={{:U("goods/index/edit_goods","id=$v[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("goods/index/del_goods","id=$v[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                            <a href=""><span class="glyphicon glyphicon-zoom-in"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

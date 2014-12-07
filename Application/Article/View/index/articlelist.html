@@ -1,0 +1,49 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>文章分类</h4>
+    </div>
+    <a href={{:U("article/index/add_article")}}><button type="button" class="btn btn-primary">新增文章</button></a>
+    <button type="button" class="btn btn-danger">删除</button>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">文章分类</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" value="">全选</th>
+                    <th>标题</th>
+                    <th>所属栏目</th>
+                    <th>发布日期</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="art" id="vo">
+                    <tr>
+                        <td><input type="checkbox" value=""></td>
+                        <td>{{$vo.title}}</td>
+                        <td>{{$vo.cate_name}}</td>
+                        <td>{{$vo.time|date="Y-m-d H:i:s",###}}</td>
+                        <td><a href={{:U("article/index/edit_article","id=$vo[id]")}}><span class="glyphicon glyphicon-pencil"></span></a>
+                            <a href={{:U("article/index/del_article","id=$vo[id]")}}><span class="glyphicon glyphicon-trash"></span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </nav>
+</block>

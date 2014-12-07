@@ -1,0 +1,55 @@
+[ 2014-12-06T16:04:03+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001804s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000241s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001439s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=13 ) LIMIT 1   [ RunTime:0.000171s ]
+SQL: INSERT INTO `goods_car` (`uid`,`gid`) VALUES (4,13) [ RunTime:0.000487s ]
+
+[ 2014-12-06T16:04:09+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001626s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000234s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001440s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=13 ) LIMIT 1   [ RunTime:0.000164s ]
+SQL: UPDATE `goods_car` SET `count`=count+1 WHERE ( id=8 ) [ RunTime:0.000596s ]
+
+[ 2014-12-06T16:10:15+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001737s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000185s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001427s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=1 ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: INSERT INTO `goods_car` (`uid`,`gid`) VALUES (4,1) [ RunTime:0.000530s ]
+
+[ 2014-12-06T16:10:20+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.026230s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000252s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001526s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=4 ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: INSERT INTO `goods_car` (`uid`,`gid`) VALUES (4,4) [ RunTime:0.000492s ]
+
+[ 2014-12-06T16:21:23+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=post_add_car
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+SQL: SHOW COLUMNS FROM `goods_cate` [ RunTime:0.001615s ]
+SQL: SELECT * FROM `goods_cate` WHERE ( pid=0 )  [ RunTime:0.000206s ]
+NOTIC: [8] Use of undefined constant user - assumed 'user' /Users/tc/www/thinkphp/Application/Common/Controller/HomeController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `goods_car` [ RunTime:0.001426s ]
+SQL: SELECT * FROM `goods_car` WHERE ( uid=4 and gid=9 ) LIMIT 1   [ RunTime:0.000152s ]
+SQL: INSERT INTO `goods_car` (`uid`,`gid`) VALUES (4,9) [ RunTime:0.000486s ]
+

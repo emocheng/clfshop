@@ -1,0 +1,42 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="money_manage">
+        <p>资金管理</p>
+        <div class="my_m_m">
+            <h3>可用余额:<span>{{$sum}}</span></h3>
+            <a href="javascript: void 0;" class="in">充值</a>|<a href="">提现</a>
+            <form class="in_money" action={{:U("user/index/post_money")}} method="post" >
+                <input type="text" name="money"/>
+                <input type="submit" value="充值"/>
+            </form>
+        </div>
+    </div>
+    <div class="my_m_s">
+        <h3>全部记录</h3>
+        <ul>
+            <li>操作时间</li>
+            <li>类型</li>
+            <li>金额</li>
+            <li>备注</li>
+            <li>状态</li>
+        </ul>
+        <volist name="money_info" id="v">
+            <table class="my_m_table">
+                <tr>
+                    <td>{{$v.time|date="Y-m-d H:i:s",###}}</td>
+                    <td>{{$v.type}}</td>
+                    <td>{{$v.money}}</td>
+                    <td>{{$v.note}}</td>
+                    <td>{{$v.stat}}</td>
+                </tr>
+            </table>
+        </volist>
+    </div>
+    <script>
+        $(function(){
+            $(".in").click(function(){
+               $(".in_money").addClass("in_active");
+            })
+        })
+    </script>
+</block>

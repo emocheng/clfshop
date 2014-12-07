@@ -1,0 +1,12 @@
+[ 2014-12-02T11:15:46+08:00 ] 127.0.0.1 /index.php?m=article&c=index&a=post_add_article
+ERR: 非法数据对象！:[create_time=>1417490146]
+
+[ 2014-12-02T11:55:32+08:00 ] 127.0.0.1 /index.php?m=article&c=index&a=post_edit_article&id=6
+ERR: Think\Model:creat方法不存在！
+
+[ 2014-12-02T11:55:43+08:00 ] 127.0.0.1 /index.php?m=article&c=index&a=post_edit_article&id=6
+ERR: Think\Model:creat方法不存在！
+
+[ 2014-12-02T14:47:26+08:00 ] 127.0.0.1 /index.php?m=article&c=index&a=add_level
+ERR: 非法操作:add_level
+

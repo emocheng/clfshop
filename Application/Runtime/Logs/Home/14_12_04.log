@@ -1,0 +1,33 @@
+[ 2014-12-04T14:02:55+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=list
+ERR: 非法操作:list
+
+[ 2014-12-04T14:03:32+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=list
+ERR: 非法操作:list
+
+[ 2014-12-04T14:03:47+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=list
+ERR: 非法操作:list
+
+[ 2014-12-04T14:03:48+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=list
+ERR: 非法操作:list
+
+[ 2014-12-04T14:04:16+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=list
+ERR: 非法操作:list
+
+[ 2014-12-04T14:20:19+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=goods_listid=1
+ERR: 非法操作:goods_listid=1
+
+[ 2014-12-04T14:47:08+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=rigister
+ERR: 非法操作:rigister
+
+[ 2014-12-04T14:48:12+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=rigister
+ERR: 非法操作:rigister
+
+[ 2014-12-04T14:49:03+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=rigister
+ERR: 非法操作:rigister
+
+[ 2014-12-04T16:16:31+08:00 ] 127.0.0.1 /index.php
+ERR: Think\Controller:check_login方法不存在！
+
+[ 2014-12-04T19:36:12+08:00 ] 127.0.0.1 /index.php?m=home&c=index&a=index
+ERR: XML标签语法错误 : session('user') != ""
+

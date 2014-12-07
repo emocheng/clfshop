@@ -1,0 +1,277 @@
+.path{
+    padding-bottom:20px;
+}
+.goods_main{
+    background: #fff;
+    padding: 14px 8px;
+}
+.goods_main_sale{
+    float: left;
+    width: 348px;
+}
+.goods_pic{
+    float: left;
+    width: 348px;
+}
+.goods_pic_big{
+    border: 1px solid #dddddd;
+    padding: 60px 2px;
+}
+.goods_pic_small{
+    margin-top: 5px;
+}
+.pic_bt:first-child{
+    margin-right: 8px;
+}
+.pic_bt{
+    float: left;
+    padding: 20px 5px;
+    border: 1px solid #ddd;
+}
+.pic_sma{
+    width: 51px;
+    height: 47px;
+    border: 1px solid #ddd;
+    margin-right: 8px;
+    float: left;
+    padding-top: 4px;
+}
+.pic_sma:hover{
+    border: 1px solid #e4393c;
+}
+.pic_more{
+    padding-top: 20px;
+}
+.check_pic{
+    float: left;
+    width: 87px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+}
+.check_pic img{
+    padding-right: 4px;
+
+    vertical-align: middle;
+}
+.duibi{
+    margin:0 6px;
+    padding: 8px 2px;
+}
+.shar{
+    float: left;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+}
+.shar img{
+    padding-right: 4px;
+    vertical-align: middle;
+}
+.goods_right{
+    margin-left: 15px;
+    float: left;
+    width: 431px;
+}
+.goods_name{
+    font-size: 18px;
+    color: black;
+
+}
+.qianggou{
+    margin: 10px 0;
+
+}
+.qianggou p{
+    color: #e4393c;
+    font-size: 18px;
+}
+.hr{
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.goods_info{
+
+    margin-top: 10px;
+}
+.goods_info p{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.sale_info a{
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    display: block;
+    float: left;
+    margin: 80px 50px 0;
+}
+.goods_content{
+    background-color: #fff;
+    padding:14px 8px;
+}
+.goods_tags{
+    width: 339px;
+    height: 36px;
+
+}
+.do{
+    width: 100%;
+    background: #ddd;
+}
+.goods_tags div{
+    border: 1px solid #ddd;
+    border-left: none;
+    padding:11px 31px;
+    float: left;
+
+}
+.goods_tags div:first-child{
+    border: 1px solid #ddd;
+}
+.goods_tags div:hover{
+    border-top: 2px solid red;
+    color: red;
+    border-bottom: none;
+}
+.goods_con_info{
+    padding: 20px;
+    border: solid #DEDFDE;
+    border-width: 0 1px 1px;
+    overflow: hidden;
+    zoom: 1;
+}
+.goods_con_info li{
+    float: left;
+    width: 33%;
+    overflow: hidden;
+    line-height: 24px;
+    padding: 2px 0;
+}
+.goods_common{
+    margin-top: 20px;
+}
+.g_c_t{
+
+    color: red;
+    width: 50px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    padding:11px 31px;
+}
+.g_c_t:hover{
+    border-top: 2px solid red;
+}
+.user_common{
+
+    margin: 20px 0;
+    padding: 10px;
+}
+.user_img{
+    float: left;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.user_common_i{
+    float: left;
+    margin-left: 30px;
+    border:1px solid #ddd;
+    width: 671px;
+    height: 108px;
+}
+.user_star{
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+.user_common_s{
+    padding: 10px;
+}
+.tell_page{
+    background: #fff;
+    float: right;
+    margin-top: 10px;
+}
+.tell_page a{
+    margin-right: 4px;
+    display: block;
+    float: left;
+    padding: 10px;
+    border:1px solid #f1f1f1;
+}
+.jifen{
+    border:1px solid #bbbbbb;
+    float: left;
+    margin:10px 20px 10px 0;
+    padding: 10px;
+}
+
+.main .container{
+    padding-top: 30px;
+}
+.ban{
+    background-color: #fff;
+    padding:20px 2px;
+}
+.ban_btn{
+    width:60px;
+    height: 10px;
+    border-top: 2px solid #e82020;
+    border-right:1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    color: #e82020;
+    padding:14px 24px;
+    font-size: 16px;
+    text-align: center;
+}
+.ban_link{
+    border-top: 1px solid #bbbbbb;
+}
+.ban_tell{
+    padding:20px;
+    margin-bottom: 10px;
+}
+.admin{
+    float: left;
+    padding:30px 0 0 30px;
+}
+.admin p{
+    color: #666666;
+}
+.tell_border{
+    float: right;
+    width: 671px;
+    height: 132px;
+    border: 1px solid #bbbbbb;
+}
+.star{
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+.area{
+    text-align: left;
+    border: none;
+    padding: 10px;
+}
+.tell_page{
+    background: #fff;
+    float: right;
+    margin-top: 10px;
+}
+.tell_page a{
+    margin-right: 4px;
+    display: block;
+    float: left;
+    padding: 10px;
+    border:1px solid #f1f1f1;
+}
+.tell{
+    background-color: #fff;
+    padding-bottom: 100px;
+}
+.my_tell{
+    height: 304px;
+    width: 760px;
+    border: 1px solid #bbbbbb;
+    margin:20px auto;
+    padding:20px;
+
+}

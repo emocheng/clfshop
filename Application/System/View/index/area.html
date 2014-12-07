@@ -1,0 +1,35 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>地区列表</h4>
+    </div>
+    <div>
+        <form action="">
+            增加一级地区:<input type="">
+            <input type="submit" value="添加">
+        </form>
+    </div>
+    <div class="panel panel-default" style="margin-top: 20px;">
+        <div class="panel-heading">地区列表</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>地区</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>中国</td>
+                    <td><a href=""><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href=""><span class="glyphicon glyphicon-trash"></span></a>
+                        <a href=""><span class="glyphicon glyphicon-plus"></span></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</block>

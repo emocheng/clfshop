@@ -1,0 +1,160 @@
+<extend name="./Public/layout_admin.html" />
+
+<block name="content">
+    <div class="page-header">
+        <h4>添加商品</h4>
+    </div>
+    <div style="width: 50%">
+        <form class="form-horizontal" role="form" action={{:U("goods/index/post_add_goods")}} method="post">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="name" placeholder="商品名称">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">货号</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="sn" placeholder="货号">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">价格</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="price" placeholder="价格">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">类别</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="gid">
+                        <volist name="glist" id="v">
+                        <option value="{{$v.id}}">
+                            <for start="1" end="$v['count']">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </for>
+                            {{$v.name}}
+                        </option>
+                        </volist>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">品牌</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="logo" placeholder="品牌">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品毛重</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="weight" placeholder="***kg">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品产地</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="place" placeholder="如中国">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">尺寸</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="size" placeholder="**英寸">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">处理器</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="cpu" placeholder="处理器型号">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">触控</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="touch">
+                        <option value="触控">触控</option>
+                        <option value="非触控">非触控</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">厚度</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="t">
+                        <option value="轻薄">轻薄</option>
+                        <option value="普通轻薄">普通轻薄</option>
+                        <option value="非轻薄">非轻薄</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否上架</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="shelve"  value="1">是
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="shelve" id="0" value="option2">否
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">是否精品</label>
+                <div class="col-sm-10">
+                    <label class="radio-inline">
+                        <input type="radio" name="cp" id="inlineRadio1" value="1">是
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="cp" id="inlineRadio2" value="0">否
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">商品图片</label>
+                <div class="col-sm-10">
+                    <input type="text" id="thumb" class="span5" name="thumb">
+                    <input type="button"  value="上 传" onclick="BrowseServer('thumb','img_show')" class="btn btn-success" />
+                    <img src="" id="img_show" width="90px" height="90px" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">产品介绍</label>
+                <div class="col-sm-10">
+                    <textarea name="content" class="content"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">确定</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--图片上传与文本编辑-->
+    <script src="__PUBLIC__/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/ckfinder/ckfinder.js"></script>
+    <script>
+        CKEDITOR.replace('content',
+                {
+                    filebrowserBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html',
+                    filebrowserImageBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Images',
+                    filebrowserFlashBrowseUrl: '__PUBLIC__/ckfinder/ckfinder.html?type=Flash',
+                    filebrowserUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                    filebrowserImageUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                    filebrowserFlashUploadUrl: '__PUBLIC__/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                });
+
+            function BrowseServer(thumb, img_show) {
+                var finder = new CKFinder();
+                //当选中图片时执行的函数
+                finder.selectActionFunction = function(fileUrl){
+                    $("#"+thumb).val(fileUrl);
+                    $("#"+img_show).attr("src",""+fileUrl+"");
+                }
+
+                finder.popup();//调用窗口
+            }
+
+    </script>
+</block>

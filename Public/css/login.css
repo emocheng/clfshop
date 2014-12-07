@@ -1,0 +1,49 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.logo{
+    position:absolute;
+    left:500px;
+    top: 100px;
+}
+.login{
+    width:378px;
+    height:255px;
+    border: 1px solid #7c7c7c;
+    position: absolute;
+    left:500px;
+    top:200px;
+    padding: 20px 40px;
+}
+form{
+    margin-top:20px;
+
+}
+form input[name="name"]{
+    width: 380px;
+    height: 36px;
+}
+form input[name="password"]{
+    width: 380px;
+    height:36px;
+}
+.tijiao{
+    width: 380px;
+    height:26px;
+    background:#e82020;
+    color: #fff;
+    margin: 20px 0;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+
+}
+.help a{
+    color: #999999;
+    text-decoration: none;
+}
+.help a:last-child{
+    float: right;
+}

@@ -1,0 +1,3 @@
+[ 2014-12-03T00:21:47+08:00 ] 127.0.0.1 /index.php?m=article&c=index&a=post_add_goods_cate
+ERR: 非法操作:post_add_goods_cate
+

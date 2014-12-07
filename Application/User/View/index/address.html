@@ -1,0 +1,42 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="address">
+        <p>收货地址</p>
+        <volist name="my_address" id="v">
+            <div class="my_address_bord">
+                <h3><span>{{$v.username}}</span>
+                    <a href="">修改地址信息</a>
+                    <a href={{:U("user/index/del_address","id=$v[id]")}}>删除</a></h3>
+                <h4>收货人:<span>{{$v.username}}</span></h4>
+                <h4>地址:<span>{{$v.address}}</span></h4>
+                <h4>手机:<span>{{$v.userphone}}</span></h4>
+            </div>
+        </volist>
+        <div class="add_address">
+            <p>新增收货地址</p>
+            <div class="add_my_address">
+                <form action={{:U("user/index/post_address")}} method="post">
+                    <table class="add_m_a_table">
+                        <tr>
+                            <td>收货人:</td>
+                            <td><input type="text" name="username"/></td>
+                        </tr>
+                        <tr>
+                            <td>地址:</td>
+                            <td><input type="text" name="address"/></td>
+                        </tr>
+                        <tr>
+                            <td>电话:</td>
+                            <td><input type="text" name="userphone"/></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="type" value="1"/>设为默认收货地址</td>
+                        </tr>
+                    </table>
+                    <input class="new_address_btn" type="submit" value="保存"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</block>
