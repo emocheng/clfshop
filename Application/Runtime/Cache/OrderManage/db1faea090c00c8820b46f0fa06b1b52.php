@@ -188,35 +188,34 @@
     <div class="panel panel-default" style="margin-top: 20px;">
         <div class="panel-heading">订单列表</div>
         <div class="panel-body">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>订单号</th>
-                    <th>购买商品</th>
-                    <th>下单时间</th>
-                    <th>收货人</th>
-                    <th>总金额</th>
-                    <th>应付金额</th>
-                    <th>订单状态</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="checkbox">12321212</td>
-                    <td>华硕E17283</td>
-                    <td>2014-11-30 20:30:23</td>
-                    <td>刘先生【13692830232】</td>
-                    <td>3999.00</td>
-                    <td>3999.00</td>
-                    <td>已确认,已付款,已发货</td>
-                    <td>
-                        <a href=""><span class="glyphicon glyphicon-zoom-in"></span></a>
-                    </td>
-                </tr>
-
-                </tbody>
-            </table>
+            <?php if(is_array($u)): $i = 0; $__LIST__ = $u;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>订单号</th>
+                        <th>购买商品</th>
+                        <th>下单时间</th>
+                        <th>收货人</th>
+                        <th>数量</th>
+                        <th>应付金额</th>
+                        <th>订单状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox"><?php echo ($v["sn"]); ?></td>
+                        <td><?php echo ($v["goods_name"]); ?></td>
+                        <td><?php echo (date("Y-m-d H:i:s",$v["time"])); ?></td>
+                        <td><?php echo ($v["user_name"]); ?>【<?php echo ($v["phone"]); ?>】</td>
+                        <td><?php echo ($v["count"]); ?></td>
+                        <td><?php echo ($v["sum_price"]); ?></td>
+                        <td><?php echo ($v["stat"]); ?></td>
+                        <td>
+                            <a href=<?php echo U("OrderManage/index/send","id=$v[id]");?>>发货</a></span></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
 

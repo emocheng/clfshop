@@ -18,6 +18,14 @@ class IndexController extends HomeController{
        $id = I("get.id");
        $goods = M("goods");
        $g = $goods->find($id);
+       $comm = M("goods_comm");//实例化评论表
+       $user_comm = $comm->where("gid=$id")->select();
+       $user_info = M("user");
+        foreach($user_comm as $k=>$v){
+           $u_i = $user_info->find("$v[uid]");
+            $user_comm["$k"]["user_name"] = $u_i["name"];
+        }
+       $this->assign("user_comm",$user_comm);
        $this->assign("id",$id);
        $this->assign("g",$g);
        $this->display();

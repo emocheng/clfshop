@@ -71,18 +71,22 @@
         </div>
         <div class="user_main">
             
-    <div class="my_comm">
-        <p>我的评论</p>
-        <?php if(is_array($my_comm)): $i = 0; $__LIST__ = $my_comm;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="my_comm_bord">
-                <h3><span><?php echo ($v["my_name"]); ?></span>评论了<span><?php echo ($v["goods_name"]); ?></span><a href="">删除</a></h3>
-                <h4>商品评分:<span>5</span></h4>
-                <h4>心得:<span>物流服务挺好的</span></h4>
-                <h4>价格:<span><?php echo ($v["price"]); ?></span>
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    产地:<span><?php echo ($v["place"]); ?></span>
-                    <i><?php echo (date("Y-m-d H:i:s",$v["time"])); ?></i>
-                </h4>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+    <div class="address">
+        <p>写个评价吧</p>
+
+        <div class="add_address">
+            <div class="add_my_address">
+                <form action=<?php echo U("user/index/appraise");?> method="post">
+                    <table class="add_m_a_table">
+                        <tr>
+                            <td>评价:</td>
+                            <td><textarea class="appraise"></textarea></td>
+                        </tr>
+                    </table>
+                    <input class="new_address_btn" type="submit" value="发送"/>
+                </form>
+            </div>
+        </div>
     </div>
 
         </div>

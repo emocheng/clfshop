@@ -33,35 +33,36 @@
     <div class="panel panel-default" style="margin-top: 20px;">
         <div class="panel-heading">订单列表</div>
         <div class="panel-body">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>订单号</th>
-                    <th>购买商品</th>
-                    <th>下单时间</th>
-                    <th>收货人</th>
-                    <th>总金额</th>
-                    <th>应付金额</th>
-                    <th>订单状态</th>
-                    <th>操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="checkbox">12321212</td>
-                    <td>华硕E17283</td>
-                    <td>2014-11-30 20:30:23</td>
-                    <td>刘先生【13692830232】</td>
-                    <td>3999.00</td>
-                    <td>3999.00</td>
-                    <td>已确认,已付款,已发货</td>
-                    <td>
-                        <a href=""><span class="glyphicon glyphicon-zoom-in"></span></a>
-                    </td>
-                </tr>
-
-                </tbody>
-            </table>
+            <volist name="u" id="v">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>订单号</th>
+                        <th>购买商品</th>
+                        <th>下单时间</th>
+                        <th>收货人</th>
+                        <th>数量</th>
+                        <th>应付金额</th>
+                        <th>订单状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="checkbox">{{$v.sn}}</td>
+                        <td>{{$v.goods_name}}</td>
+                        <td>{{$v.time|date="Y-m-d H:i:s",###}}</td>
+                        <td>{{$v.user_name}}【{{$v.phone}}】</td>
+                        <td>{{$v.count}}</td>
+                        <td>{{$v.sum_price}}</td>
+                        <td>{{$v.stat}}</td>
+                        <td>
+                            <a href={{:U("OrderManage/index/send","id=$v[id]")}}>发货</a></span></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </volist>
         </div>
     </div>
 </block>

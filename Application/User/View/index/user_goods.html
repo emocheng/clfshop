@@ -15,6 +15,7 @@
                     </td>
                     <td>
                         <p>{{$v.stat}}</p>
+                        <p class="appraise_ajax"><a href={{:U("user/index/appraise","id=$v[id]")}} data_type="{{$v.id}}">确认收货</a></p>
                     </td>
                     <td>
                         <p>{{$v.count}}</p>
@@ -28,4 +29,17 @@
             </table>
         </volist>
     </div>
+    <!--<script>-->
+        <!--$(function(){-->
+            <!--$(".appraise_ajax").click(function(){-->
+                <!--var id = $(this).children().attr("data_type");-->
+                <!--$.post("{{:U(receipt)}}", {-->
+                    <!--id : id,-->
+                <!--}, function(data){-->
+                    <!--console.log(data);-->
+                    <!--window.location.href="{{:U('user/index/appraise','id=a')}}";-->
+                <!--}, "html")-->
+            <!--})-->
+        <!--})-->
+    <!--</script>-->
 </block>

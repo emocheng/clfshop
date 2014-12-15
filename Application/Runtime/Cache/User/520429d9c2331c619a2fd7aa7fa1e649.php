@@ -85,6 +85,7 @@
                     </td>
                     <td>
                         <p><?php echo ($v["stat"]); ?></p>
+                        <p class="appraise_ajax"><a href=<?php echo U("user/index/appraise","id=$v[id]");?> data_type="<?php echo ($v["id"]); ?>">确认收货</a></p>
                     </td>
                     <td>
                         <p><?php echo ($v["count"]); ?></p>
@@ -97,6 +98,19 @@
                 </tr>
             </table><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
+    <!--<script>-->
+        <!--$(function(){-->
+            <!--$(".appraise_ajax").click(function(){-->
+                <!--var id = $(this).children().attr("data_type");-->
+                <!--$.post("<?php echo U(receipt);?>", {-->
+                    <!--id : id,-->
+                <!--}, function(data){-->
+                    <!--console.log(data);-->
+                    <!--window.location.href="<?php echo U('user/index/appraise','id=a');?>";-->
+                <!--}, "html")-->
+            <!--})-->
+        <!--})-->
+    <!--</script>-->
 
         </div>
         <div class="clear"></div>

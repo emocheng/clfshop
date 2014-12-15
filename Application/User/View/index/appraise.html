@@ -1,0 +1,20 @@
+<extend name="./Public/layout_user.html" />
+<block name="user_main">
+    <div class="address">
+        <p>写个评价吧</p>
+
+        <div class="add_address">
+            <div class="add_my_address">
+                <form action={{:U("user/index/post_appraise","id=$id")}} method="post">
+                    <table class="add_m_a_table">
+                        <tr>
+                            <td>评价:</td>
+                            <td><textarea name="comm" class="appraise"></textarea></td>
+                        </tr>
+                    </table>
+                    <input class="new_address_btn" type="submit" value="发送"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</block>

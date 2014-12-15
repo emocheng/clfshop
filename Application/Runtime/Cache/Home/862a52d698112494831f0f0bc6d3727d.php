@@ -144,14 +144,17 @@
 	 		<div class="goods_common">
 	 			<div class="g_c_t">用户评价</div>
 	 			<div class="hr" style="margin:0"></div>
-	 			<div class="user_common">
-	 				<div class="user_img"><img src="/Public/img/admin_03.gif"></div>
-	 				<div class="user_common_i">
-	 					<div class="user_star"><img src="/Public/img/star_07.gif"></div>
-	 					<div class="user_common_s">质量不错</div>
-	 				</div>
-	 				<div class="clear"></div>
-	 			</div>
+                    <?php if(is_array($user_comm)): $i = 0; $__LIST__ = $user_comm;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="user_common">
+                            <div class="user_img">
+                                <img src="/Public/img/admin_03.gif">
+                                <div><?php echo ($v["user_name"]); ?></div>
+                            </div>
+                            <div class="user_common_i">
+                                <div class="user_star"><img src="/Public/img/star_07.gif"></div>
+                                <div class="user_common_s"><?php echo ($v["comm"]); ?></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
 	 		</div>
 	 		<div class="tell_page">
 				<a href="">上一页</a>

@@ -49,6 +49,28 @@ class IndexController extends HomeController{
         $this->display();
     }
 
+    function appraise(){ //确认收货
+        $id=I("get.id");
+        $receipt =M("order");
+        $receipt->stat="已收货";
+        $receipt->where("id=$id")->save();
+        $this->assign("id",$id);
+        $this->display();
+    }
+
+    function post_appraise(){
+        $gid = I("get.id");
+        $uid = $this->user["id"];
+        $comm = I("post.comm");
+        $post_appraise = M("goods_comm");
+        $post_appraise->gid=$gid;
+        $post_appraise->uid=$uid;
+        $post_appraise->comm=$comm;
+        $post_appraise->time=time();
+        $post_appraise->add();
+    }
+
+
     function car(){ //购物车
         $id=$this->user['id'];
         $car=D("UserView");
@@ -139,6 +161,21 @@ class IndexController extends HomeController{
         $this->display();
     }
     function my_comm(){ //评论管理
+        $id =$this->user["id"];
+        $comm = M("goods_comm");
+        $my_comm = $comm->where("uid=$id")->select();
+        $goods = M("goods");
+        $user_info = M("user");
+
+        foreach($my_comm as $k=>$v){
+            $goods_info = $goods->find("$v[gid]");
+            $u_f = $user_info->find("$v[uid]");
+            $my_comm[$k]["my_name"] = $u_f["name"];
+            $my_comm[$k]["goods_name"] = $goods_info["name"];
+            $my_comm[$k]["price"] = $goods_info["price"];
+            $my_comm[$k]["place"] =$goods_info["place"];
+        }
+        $this->assign("my_comm",$my_comm);
         $this->display();
     }
     function money_manage(){ //资金管理

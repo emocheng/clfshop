@@ -89,14 +89,19 @@
 	 		<div class="goods_common">
 	 			<div class="g_c_t">用户评价</div>
 	 			<div class="hr" style="margin:0"></div>
-	 			<div class="user_common">
-	 				<div class="user_img"><img src="__PUBLIC__/img/admin_03.gif"></div>
-	 				<div class="user_common_i">
-	 					<div class="user_star"><img src="__PUBLIC__/img/star_07.gif"></div>
-	 					<div class="user_common_s">质量不错</div>
-	 				</div>
-	 				<div class="clear"></div>
-	 			</div>
+                    <volist name="user_comm" id="v">
+                        <div class="user_common">
+                            <div class="user_img">
+                                <img src="__PUBLIC__/img/admin_03.gif">
+                                <div>{{$v.user_name}}</div>
+                            </div>
+                            <div class="user_common_i">
+                                <div class="user_star"><img src="__PUBLIC__/img/star_07.gif"></div>
+                                <div class="user_common_s">{{$v.comm}}</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </volist>
 	 		</div>
 	 		<div class="tell_page">
 				<a href="">上一页</a>

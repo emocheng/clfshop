@@ -2,38 +2,17 @@
 <block name="user_main">
     <div class="my_comm">
         <p>我的评论</p>
-        <div class="my_comm_bord">
-            <h3><span>admin</span>评论了<span>戴尔笔记本</span><a href="">删除</a></h3>
-            <h4>商品评分:<span>5</span></h4>
-            <h4>心得:<span>物流服务挺好的</span></h4>
-            <h4>颜色:<span>沉稳黑</span>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                型号:<span>i5-3337U</span>
-                <i>2014-11-1 23:23:21</i>
-            </h4>
-        </div>
-
-        <div class="my_comm_bord">
-            <h3><span>admin</span>评论了<span>戴尔笔记本</span><a href="">删除</a></h3>
-            <h4>商品评分:<span>5</span></h4>
-            <h4>心得:<span>物流服务挺好的</span></h4>
-            <h4>颜色:<span>沉稳黑</span>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                型号:<span>i5-3337U</span>
-                <i>2014-11-1 23:23:21</i>
-            </h4>
-        </div>
-
-        <div class="my_comm_bord">
-            <h3><span>admin</span>评论了<span>戴尔笔记本</span><a href="">删除</a></h3>
-            <h4>商品评分:<span>5</span></h4>
-            <h4>心得:<span>物流服务挺好的</span></h4>
-            <h4>颜色:<span>沉稳黑</span>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                型号:<span>i5-3337U</span>
-                <i>2014-11-1 23:23:21</i>
-            </h4>
-        </div>
+        <volist name="my_comm" id="v">
+            <div class="my_comm_bord">
+                <h3><span>{{$v.my_name}}</span>评论了<span>{{$v.goods_name}}</span><a href="">删除</a></h3>
+                <h4>商品评分:<span>5</span></h4>
+                <h4>心得:<span>物流服务挺好的</span></h4>
+                <h4>价格:<span>{{$v.price}}</span>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    产地:<span>{{$v.place}}</span>
+                    <i>{{$v.time|date="Y-m-d H:i:s",###}}</i>
+                </h4>
+            </div>
+        </volist>
     </div>
-
 </block>
